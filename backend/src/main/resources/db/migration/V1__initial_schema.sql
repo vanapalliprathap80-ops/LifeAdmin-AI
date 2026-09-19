@@ -1,0 +1,2 @@
+-- Phase 1 placeholder migration.
+-- Database schema will be introduced in Phase 2.
