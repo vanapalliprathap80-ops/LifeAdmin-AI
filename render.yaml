@@ -1,0 +1,33 @@
+databases:
+  - name: lifeadmin-db
+    plan: free
+    databaseName: lifeadmin
+    user: lifeadmin
+
+services:
+  - type: web
+    name: lifeadmin-backend
+    env: docker
+    plan: free
+    rootDir: backend
+    envVars:
+      - key: DB_HOST
+        fromDatabase:
+          name: lifeadmin-db
+          property: host
+      - key: DB_PORT
+        fromDatabase:
+          name: lifeadmin-db
+          property: port
+      - key: DB_NAME
+        fromDatabase:
+          name: lifeadmin-db
+          property: database
+      - key: DB_USERNAME
+        fromDatabase:
+          name: lifeadmin-db
+          property: user
+      - key: DB_PASSWORD
+        fromDatabase:
+          name: lifeadmin-db
+          property: password
