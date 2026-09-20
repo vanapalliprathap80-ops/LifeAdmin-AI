@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { NavLink, Outlet, useNavigate } from 'react-router-dom';
-import { getAuthToken, setAuthToken, apiFetch } from '../api/client';
+import { setAuthToken, apiFetch } from '../api/client';
 
 export const Layout: React.FC = () => {
   const [userEmail, setUserEmail] = useState<string>('');

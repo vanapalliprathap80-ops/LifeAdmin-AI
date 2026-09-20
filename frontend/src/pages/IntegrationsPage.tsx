@@ -85,10 +85,6 @@ export const IntegrationsPage: React.FC = () => {
     else setCredentials({ testAccount: 'DEMO' });
   };
 
-  const handleAddManually = (providerName: string) => {
-    navigate('/services/new', { state: { presetName: providerName } });
-  };
-
   // Group providers by category
   const categories = [...new Set(catalog.map(p => p.category))];
 

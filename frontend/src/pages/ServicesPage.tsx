@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { listServices } from '../api/servicesApi';
 import type { ServiceDto } from '../types';
 import { ServiceCard } from '../components/ServiceCard';
@@ -8,7 +8,6 @@ export const ServicesPage: React.FC = () => {
   const [services, setServices] = useState<ServiceDto[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
-  const navigate = useNavigate();
 
   useEffect(() => {
     listServices()
